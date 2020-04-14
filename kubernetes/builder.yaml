@@ -1,0 +1,25 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: builder
+  namespace: job
+spec:
+  template:
+    spec:
+      containers:
+      - name: builder
+        image: wangziling100/helm_editor_prod
+        imagePullPolicy: IfNotPresent
+        # command:
+        volumeMounts:
+        - mountPath: /workspace
+          name: source
+        
+      volumes:
+      - name: source
+        hostPath:
+          # directory location on host
+          path: /host/ubuntu_root/workspace/helm_editor/source
+          # this field is optional
+          type: Directory
+      restartPolicy: Never
