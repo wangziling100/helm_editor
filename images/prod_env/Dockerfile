@@ -1,4 +1,3 @@
 FROM python:alpine
-RUN pip install pyyaml && \
-    pip install pyinstaller
+RUN pip install pyyaml
 CMD ["python3"]
