@@ -10,7 +10,7 @@ spec:
       - name: builder
         image: wangziling100/helm_editor_prod
         imagePullPolicy: IfNotPresent
-        # command:
+        command: ['sh', '/workspace/build.sh']
         volumeMounts:
         - mountPath: /workspace
           name: source
