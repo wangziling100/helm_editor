@@ -4,6 +4,7 @@ metadata:
   name: builder
   namespace: job
 spec:
+  ttlSecondsAfterFinished: 10
   template:
     spec:
       containers:

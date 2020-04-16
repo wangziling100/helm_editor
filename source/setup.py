@@ -1,11 +1,11 @@
 from setuptools import setup
 setup(
-    name = 'pyTest',
+    name = 'HelmEditor',
     version = '0.1.0',
-    packages = ['pyTest'],
+    packages = ['HelmEditor'],
     entry_points = {
         'console_scripts':[
-            'pyTest = pyTest.main:main'
+            'HelmEditor = HelmEditor.main:main'
         ]
     }
 )
